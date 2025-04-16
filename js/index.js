@@ -7,6 +7,7 @@ function openSideDiv() {
     openClose.classList.toggle('right-[0px!important]')
     hiddenSideDiv.classList.toggle('hidden')
     xMark.classList.toggle('fa-xmark')
+    document.body.classList.toggle('overflow-hidden')
 }
 
 function accordionFooter(arg, svg) {

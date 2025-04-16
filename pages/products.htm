@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>products</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="src/output.css" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <link rel="stylesheet" href="../src/style.css" />
 </head>
-
 <body>
     <header>
         <div class="z-10 relative"
@@ -35,7 +33,7 @@
                     </a>
                     <menu
                         class="text-[#000000de] hidden md:flex items-center text-[14px] gap-6 tracking-widest uppercase font-bold">
-                        <li><a href="pages/products.htm" class="hover:text-[#00754a] transition duration-300">menu</a></li>
+                        <li><a href="products.htm" class="hover:text-[#00754a] transition duration-300">menu</a></li>
                         <li><a href="#" class="hover:text-[#00754a] transition duration-300">rewards</a></li>
                         <li><a href="#" class="hover:text-[#00754a] transition duration-300">gift cards</a></li>
                     </menu>
@@ -69,7 +67,7 @@
         <div id="openClose"
             class="max-w-[81%] fixed right-[-100%] top-[64px] mini:top-[73px] md:hidden w-full h-full transition-all duration-500 font-sodo pt-8 bg-white">
             <ul class="text-[19px] tracking-wide">
-                <li><a href="pages/products.htm" class="block p-[16px_32px]">Menu</a></li>
+                <li><a href="#" class="block p-[16px_32px]">Menu</a></li>
                 <li><a href="#" class="block p-[16px_32px]">Rewards</a></li>
                 <li><a href="#" class="block p-[16px_32px]">Gift Cards</a></li>
             </ul>
@@ -96,110 +94,25 @@
         </div>
     </header>
 
-    <main class="max-w-[1440px] mx-auto font-sodo">
-        <div class="my-[32px] md:flex bg-[#32462f]">
-            <div class="md:w-[50%] flex items-center md:order-[2]">
-                <img src="img/pht1.webp" alt="photo" />
-            </div>
-            <div class=" md:w-[50%] py-[32px] px-4 md:px-6 lg:px-10">
-                <div class="md:max-w-[83%] m-auto flex flex-col justify-center items-center h-full">
-                    <h2
-                        class="lg:text-[50px] text-center mini:text-[28px] text-[24px] font-[600] tracking-[2px] text-white capitalize">
-                        the spring edit</h2>
-                    <p class="text-white text-[19px] mini:text-[22px] md:text-[24px] m-[20px_0_32px]">Fresh flavors,
-                        familiar joy.</p>
-                    <a href="#"
-                        class="px-[16px] h-[32px] max-mini:text-[14px] flex items-center rounded-[50px] border border-white text-white font-[600] hover:bg-[#0003] transition duration-300">View
-                        the menu</a>
-                </div>
-            </div>
+    <main class="font-sodo pb-6 md:pb-10">
+        <div class="border border-[#edebe9] border-b-[1px] border-b-[#dbd9d7] bg-[#f9f9f9] px-4 md:p-[0px_40px_0px_118px]">
+            <ul class="flex text-[13px]">
+                <li class="py-4 mr-8 max-slm:mr-4 underline"><a href="products.htm">Menu</a></li>
+                <li class="py-4 mr-8 max-slm:mr-4"><a href="#">Featured</a></li>
+                <li class="py-4 mr-8 max-slm:mr-4"><a href="#">Previous</a></li>
+                <li class="py-4"><a href="#">Favorites</a></li>
+            </ul>
         </div>
-
-        <div class="my-[32px] md:flex bg-[#5f4633]">
-            <div class="md:w-[50%] flex items-center">
-                <img src="img/pht2.jpg" alt="photo" />
+        <div class="px-4 md:p-[0px_40px_0px_118px] bg-white flex">
+            <div id="menuBar" class="w-[150px] max-lg:hidden pt-4">
             </div>
-            <div class=" md:w-[50%] py-[32px] px-4 md:px-6 lg:px-10">
-                <div class="md:max-w-[83%] text-center m-auto flex flex-col justify-center items-center h-full">
-                    <h2 class="lg:text-[24px] mini:text-[22px] text-[19px] font-[600] tracking-[2px] text-[#fbf5e7]">
-                        It’s a great day for free coffee</h2>
-                    <p class="text-[#fbf5e7] leading-[1.75] text-[16px] md:text-[19px] m-[20px_0_32px]">Start your
-                        Starbucks® Rewards journey with a coffee on us. Join now and enjoy a free handcrafted drink with
-                        a qualifying purchase during your first week.*</p>
-                    <a href="#"
-                        class="px-[16px] h-[32px] max-mini:text-[14px] flex items-center rounded-[50px] border border-white text-white font-[600] hover:bg-[#0003] transition duration-300">Join
-                        now</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-[32px] md:flex bg-[#32462f]">
-            <div class="md:w-[50%] md:order-[2]">
-                <img src="img/pht3.jpg" class="h-full" alt="photo" />
-            </div>
-            <div class=" md:w-[50%] py-[32px] px-4 md:px-6 lg:px-10">
-                <div class="md:max-w-[83%] m-auto text-center flex flex-col justify-center items-center h-full">
-                    <h2 class="lg:text-[50px] mini:text-[28px] text-[24px] font-[600] tracking-[2px] text-white">Spread
-                        spring cheer</h2>
-                    <p class="text-white text-[19px] mini:text-[22px] md:text-[24px] m-[20px_0_32px]">Wish someone a
-                        Happy Easter and joyful spring with a Starbucks Card.</p>
-                    <a href="#"
-                        class="px-[16px] h-[32px] max-mini:text-[14px] flex items-center rounded-[50px] border border-white text-white font-[600] hover:bg-[#0003] transition duration-300">Send
-                        an eGift</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-[32px] md:flex bg-[#32462f]">
-            <div class="md:w-[50%] flex items-center">
-                <img src="img/pht4.webp" alt="photo" />
-            </div>
-            <div class=" md:w-[50%] py-[32px] px-4 md:px-6 lg:px-10">
-                <div class="md:max-w-[83%] text-center m-auto flex flex-col justify-center items-center h-full">
-                    <h2 class="lg:text-[50px] mini:text-[28px] text-[24px] font-[600] tracking-[2px] text-white">
-                        Nondairy milk, no extra charge</h2>
-                    <p class="text-white text-[19px] mini:text-[22px] md:text-[24px] m-[20px_0_32px]">Customize your
-                        drink with your favorite nondairy milk—like soy, coconut, almond or oat—for no additional
-                        charge.</p>
-                    <a href="#"
-                        class="px-[16px] h-[32px] max-mini:text-[14px] flex items-center rounded-[50px] border border-white text-white font-[600] hover:bg-[#0003] transition duration-300">Order
-                        now</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="my-[32px] md:flex bg-[#006242]">
-            <div class="md:w-[50%] flex items-center md:order-[2]">
-                <img src="img/pht5.jpg" alt="photo" />
-            </div>
-            <div class=" md:w-[50%] py-[32px] px-4 md:px-6 lg:px-10">
-                <div class="md:max-w-[83%] m-auto text-center flex flex-col justify-center items-center h-full">
-                    <h2 class="lg:text-[50px] mini:text-[28px] text-[24px] font-[600] tracking-[2px] text-white">More
-                        reasons to stay awhile</h2>
-                    <p class="text-white text-[19px] mini:text-[22px] md:text-[24px] m-[20px_0_32px]">Mugs, glasses and
-                        the condiment bar are back—and get free refills of hot and iced brewed coffee or tea.**</p>
-                    <a href="#"
-                        class="px-[16px] h-[32px] max-mini:text-[14px] flex items-center rounded-[50px] border border-white text-white font-[600] hover:bg-[#0003] transition duration-300">Learn
-                        more</a>
-                </div>
-            </div>
-        </div>
-
-        <div class="max-w-[1440px] mx-auto px-[15px] text-center">
-            <div class="md:max-w-[60%] mx-auto">
-                <p class="text-[13px] leading-[1.8] md:px-6 md:text-[14px]">*Valid for new Starbucks Rewards members for
-                    7 days from sign up. Coupon will be available in the offers tab of your Starbucks app following sign
-                    up and may take up to 48 hours to arrive. Good at participating U.S. stores for a handcrafted
-                    menu-sized beverage with qualifying purchase ($8 max value). Qualifying purchase excludes alcohol,
-                    Starbucks Card and Card reloads. Limit one. Cannot be combined with other offers or discounts.
-                    Excludes delivery services. Sign up before 6/29/2025.</p>
-                <p class="text-[13px] leading-[1.8] md:px-6 py-8 mt-9 md:text-[14px]">**Free refills of hot and iced
-                    brewed coffee or tea during same store visit. Excludes Cold Brew, Nitro Cold Brew, Iced Tea
-                    Lemonade, and flavored Iced Tea and Starbucks Refreshers® base. At participating stores. Visit <a
-                        href="#" class="underline">http://starbucks.com/refills</a> to learn more</p>
+            <div class="max-w-[950px] w-full pt-8 lg:pt-10 lg:pl-[119px]">
+                <h1 class="font-bold text-[28px]">Menu</h1>
+                <div id="menuFilter"></div>
             </div>
         </div>
     </main>
+
     <footer style="box-shadow: 0 -1px 3px rgba(0, 0, 0, .1), 0 -2px 2px rgba(0, 0, 0, .06), 0 0 2px rgba(0, 0, 0, .07)">
         <div class="max-w-[1440px] mx-auto py-6 px-[16px] 2xl:px-0 md:px-6 lg:px-10">
             <div class="lg:flex">
@@ -428,7 +341,7 @@
     </footer>
 
 
-    <script src="js/index.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/products.js"></script>
 </body>
-
 </html>
