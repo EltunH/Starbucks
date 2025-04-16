@@ -21,7 +21,7 @@ function show() {
             <p class="text-[19px] w-[150px] mt-6 font-[600]">${item.name}</p>
             ${item.children.map(elm => {
             return `<ul>
-                        <li onclick=showProducts('${elm.id}') class="my-[15px] cursor-pointer text-[#00000094]">${elm.name}</li>
+                        <li onclick=showProducts('${elm.id}') class="my-[15px] cursor-pointer text-[#00000094] hover:text-[#000000dc]">${elm.name}</li>
                     </ul>`}).join('')}
             `
 
@@ -61,7 +61,6 @@ function showProducts(cod) {
                 <div>
                 <ul class="slm:flex flex-wrap gap-4 ">
                     ${item.products.map(elm => {
-            // console.log(elm);
             return `
                                 <li onclick="showDetails(${elm.productNumber})" class="my-[15px] cursor-pointer flex flex-col w-full slm:w-[45%] md:w-[195px] text-center items-center gap-4">
                                     <img src="${elm.assets.masterImage.uri}" alt="photo" class="w-[148px] h-[148px] rounded-[50%] object-cover"/>
