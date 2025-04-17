@@ -9,6 +9,7 @@ function fetchData() {
         .then(data => {
             DATA = data
             show()
+            console.log(DATA);
         })
 }
 fetchData()
@@ -19,11 +20,12 @@ function show() {
     DATA.map(item => {
         menuBar.innerHTML += `
             <p class="text-[19px] w-[150px] mt-6 font-[600]">${item.name}</p>
-            ${item.children.map(elm => {
-            return `<ul>
+            <ul>
+                ${item.children.map(elm => {
+                return `
                         <li onclick=showProducts('${elm.id}') class="my-[15px] cursor-pointer text-[#00000094] hover:text-[#000000dc]">${elm.name}</li>
-                    </ul>`}).join('')}
-            `
+                    `}).join('')}
+            </ul>`
 
         menuFilter.innerHTML += `
                 <h2 class="font-bold text-[19px] md:text-[24px] mt-10 pb-4">${item.name}</h2>
@@ -31,15 +33,14 @@ function show() {
                 <div >
                     <ul class="md:grid grid-cols-2 gap-4">
                         ${item.children.map(elm => {
-            return `
+                        return `
                                         <li onclick=showProducts('${elm.id}') class="my-[15px] cursor-pointer flex items-center gap-x-4 rounded-[54px_7px_7px_54px] hover:bg-[#f9f9f9] transition duration-300">
-                                            <img src="/img/pht1.webp" alt="photo" class="w-[72px] h-[72px] md:w-[112px] md:h-[112px] rounded-[50%] object-cover"/>
+                                            <img src="${elm.categoryImageURL}" alt="photo" class="w-[72px] h-[72px] md:w-[112px] md:h-[112px] rounded-[50%] object-cover"/>
                                             ${elm.name}
                                         </li>
                                 `}).join('')}
                     </ul>
-                </div>
-            `
+                </div>`
     })
 }
 
@@ -63,7 +64,7 @@ function showProducts(cod) {
                     ${item.products.map(elm => {
             return `
                                 <li onclick="showDetails(${elm.productNumber})" class="my-[15px] cursor-pointer flex flex-col w-full slm:w-[45%] md:w-[195px] text-center items-center gap-4">
-                                    <img src="${elm.assets.masterImage.uri}" alt="photo" class="w-[148px] h-[148px] rounded-[50%] object-cover"/>
+                                    <img src="${elm.imageURL}" alt="photo" class="w-[148px] h-[148px] rounded-[50%] object-cover"/>
                                     <span class="w-[175px] md:text-[19px]">${elm.name}</span>
                                 </li>
                             `}).join('')}
@@ -79,7 +80,7 @@ function showDetails(num) {
         item.children.map(elm => {
             elm.children.map(arg => {
                 arg.products.map(key => {
-                    if(key.productNumber == num) {
+                    if (key.productNumber == num) {
                         detailsArr.push(key)
                     }
                 })
