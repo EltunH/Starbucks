@@ -9,7 +9,6 @@ function fetchData() {
         .then(data => {
             DATA = data
             show()
-            console.log(DATA);
         })
 }
 fetchData()
@@ -60,32 +59,18 @@ function showProducts(cod) {
                 <h2 class="font-bold text-[19px] md:text-[24px] mt-10 pb-4">${item.name}</h2>
                 <hr class="mb-8 border-t-[2px] border-[#0000001a]" />
                 <div>
-                <ul class="slm:flex flex-wrap gap-4 ">
+                <ul class="slm:flex max-md:justify-center flex-wrap gap-4 ">
                     ${item.products.map(elm => {
             return `
-                                <li onclick="showDetails(${elm.productNumber})" class="my-[15px] cursor-pointer flex flex-col w-full slm:w-[45%] md:w-[195px] text-center items-center gap-4">
-                                    <img src="${elm.imageURL}" alt="photo" class="w-[148px] h-[148px] rounded-[50%] object-cover"/>
-                                    <span class="w-[175px] md:text-[19px]">${elm.name}</span>
+                                <li>
+                                    <a href="/pages/details.htm?num=${elm.productNumber}" class="my-[15px] cursor-pointer flex flex-col w-full  md:w-[195px] text-center items-center gap-4">
+                                        <img src="${elm.imageURL}" alt="photo" class="w-[148px] h-[148px] rounded-[50%] object-cover"/>
+                                        <span class="w-[175px] md:text-[19px]">${elm.name}</span>
+                                    </a>
                                 </li>
                             `}).join('')}
                 </ul>
                 </div>
             `
     })
-}
-
-function showDetails(num) {
-    let detailsArr = []
-    DATA.map(item => {
-        item.children.map(elm => {
-            elm.children.map(arg => {
-                arg.products.map(key => {
-                    if (key.productNumber == num) {
-                        detailsArr.push(key)
-                    }
-                })
-            })
-        })
-    })
-    console.log(detailsArr);
 }
