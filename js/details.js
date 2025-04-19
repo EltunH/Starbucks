@@ -1,5 +1,7 @@
 const detailsProduct = document.getElementById('detailsProduct')
-const allSize = document.querySelectorAll('#allSize div[id]')
+const allSizeDiv = document.querySelectorAll('#allSize div[id]')
+const allSize = document.getElementById('allSize')
+const sizeOption = document.getElementById('sizeOption')
 const shortBg = document.getElementById('shortBg')
 const tallBg = document.getElementById('tallBg')
 const grandeBg = document.getElementById('grandeBg')
@@ -13,7 +15,7 @@ const prdNum = param.get('num')
 let DATA
 
 function showFetch() {
-    fetch('http://localhost:3000/menus')
+    fetch('https://starbucks-data-nine.vercel.app/menus')
         .then(res => res.json())
         .then(data => {
             DATA = data
@@ -32,6 +34,13 @@ function showDetails() {
                         detailsObj = key
                         prdCateg.innerHTML = elm.name
                         prdDtls.innerHTML = key.name
+                        if(key.sizes.length == 4) {
+                            allSize.style.display = 'flex'
+                            sizeOption.style.display = 'block'
+                        }else {
+                            allSize.style.display = 'none'
+                            sizeOption.style.display = 'none'
+                        }
                     }
                 })
             })
@@ -57,7 +66,7 @@ function changeSize(id) {
     grandeBg.style.background = 'url(../img/grande.svg)'
     ventiBg.style.background = 'url(../img/venti.svg)'
 
-    for (const elm of allSize) {
+    for (const elm of allSizeDiv) {
         elm.style.border = 'none'
         elm.style.backgroundColor = ''
     }

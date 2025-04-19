@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>products</title>
+    <title>Menu-Starbucks</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../src/output.css" />
     <link rel="stylesheet" href="../src/style.css" />
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
 </head>
+
 <body>
     <header>
         <div class="z-10 relative"
@@ -33,7 +36,7 @@
                     </a>
                     <menu
                         class="text-[#000000de] hidden md:flex items-center text-[14px] gap-6 tracking-widest uppercase font-bold">
-                        <li><a href="products.htm" class="hover:text-[#00754a] transition duration-300">menu</a></li>
+                        <li><a href="products.htm" class="hover:text-[#00754a] transition duration-300 border-b-[6px] border-[#00754a] md:pb-[28px] lg:pb-[35px]">menu</a></li>
                         <li><a href="#" class="hover:text-[#00754a] transition duration-300">rewards</a></li>
                         <li><a href="#" class="hover:text-[#00754a] transition duration-300">gift cards</a></li>
                     </menu>
@@ -63,7 +66,8 @@
                 </div>
             </nav>
         </div>
-        <div onclick="openSideDiv()" id="hiddenSideDiv" class="fixed  hidden w-full top-[64px] mini:top-[73px] bottom-0 md:hidden bg-[#00000042]"></div>
+        <div onclick="openSideDiv()" id="hiddenSideDiv"
+            class="fixed  hidden w-full top-[64px] mini:top-[73px] bottom-0 md:hidden bg-[#00000042]"></div>
         <div id="openClose"
             class="max-w-[81%] fixed right-[-100%] top-[64px] mini:top-[73px] md:hidden w-full h-full transition-all duration-500 font-sodo pt-8 bg-white">
             <ul class="text-[19px] tracking-wide">
@@ -95,7 +99,8 @@
     </header>
 
     <main class="font-sodo pb-6 md:pb-10">
-        <div class="border border-[#edebe9] border-b-[1px] border-b-[#dbd9d7] lg:sticky top-0 bg-[#f9f9f9] px-4 md:p-[0px_40px_0px_118px] xl:p-[0px_40px_0px_131px]">
+        <div
+            class="border border-[#edebe9] border-b-[1px] border-b-[#dbd9d7] lg:sticky top-0 bg-[#f9f9f9] px-4 md:p-[0px_40px_0px_118px] xl:p-[0px_40px_0px_131px]">
             <ul class="flex text-[13px]">
                 <li class="py-4 mr-8 max-slm:mr-4 underline"><a href="products.htm">Menu</a></li>
                 <li class="py-4 mr-8 max-slm:mr-4"><a href="#">Featured</a></li>
@@ -107,10 +112,11 @@
             <div id="menuBar" class="w-[150px] max-lg:hidden pt-4">
             </div>
             <div class="max-w-[950px] w-full pt-8 lg:pt-10 lg:pl-[119px]">
-                <h1 class="font-bold text-[28px]">Menu</h1>
+                <h1 id="hideH1" class="font-bold text-[28px]">Menu</h1>
                 <div id="menuFilter"></div>
             </div>
         </div>
+
     </main>
 
     <footer style="box-shadow: 0 -1px 3px rgba(0, 0, 0, .1), 0 -2px 2px rgba(0, 0, 0, .06), 0 0 2px rgba(0, 0, 0, .07)">
@@ -330,13 +336,15 @@
                     <li class="py-2 mb-1"><a href="#" class="hover:underline">Privacy Notice</a></li>
                     <li class="py-2 mb-1"><a href="#" class="hover:underline">Consumer Health Privacy</a></li>
                     <li class="py-2 mb-1"><a href="#" class="hover:underline">Terms of Use</a></li>
-                    <li class="py-2 mb-1"><a href="#" class="hover:underline">Do Not Share My Personal Information</a></li>
+                    <li class="py-2 mb-1"><a href="#" class="hover:underline">Do Not Share My Personal Information</a>
+                    </li>
                     <li class="py-2 mb-1"><a href="#" class="hover:underline">CA Supply Chain Act</a></li>
                     <li class="py-2 mb-1"><a href="#" class="hover:underline">Accessibility</a></li>
                     <li class="py-2 mb-1"><a href="#" class="hover:underline">Cookie Preferences</a></li>
                 </ul>
             </div>
-            <p class="py-4 text-[#00000094] text-[13px] md:text-[14px]">© 2025 Starbucks Coffee Company. All rights reserved.</p>
+            <p class="py-4 text-[#00000094] text-[13px] md:text-[14px]">© 2025 Starbucks Coffee Company. All rights
+                reserved.</p>
         </div>
     </footer>
 
@@ -344,4 +352,5 @@
     <script src="../js/index.js"></script>
     <script src="../js/products.js"></script>
 </body>
+
 </html>
