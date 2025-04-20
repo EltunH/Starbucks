@@ -15,7 +15,7 @@ const prdNum = param.get('num')
 let DATA
 
 function showFetch() {
-    fetch('https://starbucks-data-nine.vercel.app/menus')
+    fetch("https://starbucks-data-nine.vercel.app/menus")
         .then(res => res.json())
         .then(data => {
             DATA = data
